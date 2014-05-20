@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Reflection;
 using System.Threading;
 using System.Windows;
-using System.Windows.Media;
 using Forms = System.Windows.Forms;
 
 namespace Location_Bridge

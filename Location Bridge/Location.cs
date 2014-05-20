@@ -23,11 +23,32 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System.Windows;
+using System;
 
 namespace Location_Bridge
 {
-    public partial class App : Application
+    public class Location
     {
+        public double lat;
+        public double lon;
+        public double alt;
+        public double speed;
+        public double ha, va;
+        public DateTimeOffset time;
+
+        public Location()
+        {
+        }
+
+        public Location(Location original)
+        {
+            lat = original.lat;
+            lon = original.lon;
+            alt = original.alt;
+            speed = original.speed;
+            ha = original.ha;
+            va = original.va;
+            time = original.time;
+        }
     }
 }

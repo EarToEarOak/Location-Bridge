@@ -289,4 +289,36 @@ namespace Location_Bridge
             signal.Set();
         }
     }
+
+    public enum ServerStatusCode { OK, ERROR, CONN };
+
+    public class ServerStatus
+    {
+        public ServerStatusCode status { get; set; }
+        public string message { get; set; }
+        public int value { get; set; }
+
+        public ServerStatus(string message)
+        {
+            this.status = ServerStatusCode.OK;
+            this.message = message;
+            this.value = 0;
+        }
+
+        public ServerStatus(ServerStatusCode status, string message)
+        {
+            this.status = status;
+            this.message = message;
+            this.value = 0;
+        }
+
+        public ServerStatus(ServerStatusCode status, int value)
+        {
+            this.status = status;
+            this.message = null;
+            this.value = value;
+        }
+    }
+
+    delegate void CallbackUI(ServerStatus status);
 }
