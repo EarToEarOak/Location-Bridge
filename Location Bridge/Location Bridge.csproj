@@ -93,6 +93,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Location.cs" />
     <Compile Include="WidgetLed.xaml.cs">
       <DependentUpon>WidgetLed.xaml</DependentUpon>
     </Compile>
