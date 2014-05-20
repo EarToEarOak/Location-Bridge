@@ -1,0 +1,12 @@
+﻿<Window x:Class="Location_Bridge.WindowPreferences"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Preferences" Height="162" Width="307">
+    <Grid>
+        <CheckBox x:Name="checkStart" Content="Stream location on start up" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" ToolTip="Stream location updates when the application starts"/>
+        <CheckBox x:Name="checkMinimised" Content="Start minimised" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" ToolTip="Minimise to the system tray when apllication starts"/>
+        <CheckBox x:Name="checkLocal" Content="Local host only" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" ToolTip="Only serve to local clients"/>
+        <Button x:Name="buttonOk" Content="_OK" HorizontalAlignment="Right" Margin="0,0,97,10" Width="75" Height="22" VerticalAlignment="Bottom" Click="OnButtonOk"/>
+        <Button Content="_Cancel" HorizontalAlignment="Right" Margin="0,0,17,10" Width="75" Height="22" VerticalAlignment="Bottom" Click="OnButtonCancel"/>
+    </Grid>
+</Window>
