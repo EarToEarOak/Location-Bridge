@@ -71,7 +71,7 @@
         <TextBlock Text="Time" HorizontalAlignment="Left" Margin="0,180,0,0" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="26"/>
         <TextBox Text="{Binding Time, Converter={StaticResource TimeToStringConverter}}" Height="23" Margin="0,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Grid.Column="2" ToolTip="Time"/>
         <TextBlock Text="Clients" HorizontalAlignment="Left" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="39"/>
-        <TextBox Text="{Binding Clients, Converter={StaticResource ClientsToStringConverter}}" Height="23" Margin="0,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Grid.Column="2" ToolTip="Connect clients"/>
+        <TextBox Text="{Binding Clients, Converter={StaticResource ClientsToStringConverter}}" Height="23" Margin="0,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Grid.Column="2" ToolTip="Connected clients"/>
         <TextBlock Text="Log" HorizontalAlignment="Left" Margin="0,235,0,0" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="20"/>
         <TextBox Text="{Binding Log}" Margin="0,260,10,57" TextWrapping="Wrap" IsReadOnly="True" Grid.Column="1" Grid.ColumnSpan="3">
             <TextBox.ContextMenu>
