@@ -49,10 +49,11 @@ namespace Location_Bridge
             notifyIcon = new System.Windows.Forms.NotifyIcon();
             notifyIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(
                 Assembly.GetEntryAssembly().ManifestModule.Name);
-            notifyIcon.Visible = false;
+            notifyIcon.Visible = true;
             notifyIcon.BalloonTipTitle = appName;
             notifyIcon.ContextMenuStrip = contextMenuStrip;
             notifyIcon.DoubleClick += new EventHandler(OnMenuOpen);
+            notifyIcon.BalloonTipClicked += new EventHandler(OnMenuOpen);
 
             ServerStart();
 
@@ -84,8 +85,6 @@ namespace Location_Bridge
         {
             if (WindowState == WindowState.Minimized)
                 MinimiseToTray();
-            else
-                notifyIcon.Visible = false;
 
             base.OnStateChanged(e);
         }
@@ -262,7 +261,6 @@ namespace Location_Bridge
         private void MinimiseToTray()
         {
             WindowState = WindowState.Minimized;
-            notifyIcon.Visible = true;
             notifyIcon.ShowBalloonTip(2000);
             Hide();
         }
