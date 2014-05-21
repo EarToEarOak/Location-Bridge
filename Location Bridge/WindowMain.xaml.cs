@@ -26,7 +26,9 @@ namespace Location_Bridge
             InitializeComponent();
             ui = (WindowMainModel)base.DataContext;
 
-            var appName = Assembly.GetExecutingAssembly().GetName().Name;
+            var appName = ((AssemblyTitleAttribute)Attribute.GetCustomAttribute(
+                 Assembly.GetExecutingAssembly(), typeof(AssemblyTitleAttribute), false))
+                .Title;
             Title = appName;
 
             contextMenuStrip.Items.AddRange(new Forms.ToolStripItem[] {
