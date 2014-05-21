@@ -22,11 +22,12 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-    
+
 <Window x:Class="Location_Bridge.WindowMain"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="511" Width="394" Closing="OnClose" MinHeight="563" MinWidth="394"
-    xmlns:local="clr-namespace:Location_Bridge">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Location_Bridge"
+        Height="511" Width="394" Closing="OnClose" MinHeight="563" MinWidth="394">
     <Window.Resources>
         <local:CoordToStringConverter x:Key="CoordToStringConverter"/>
         <local:DistToStringConverter x:Key="DistToStringConverter"/>
@@ -37,7 +38,7 @@
     <Window.DataContext>
         <local:WindowMainModel/>
     </Window.DataContext>
-    <Grid Margin="0,0,0,-4">
+    <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>
             <ColumnDefinition Width="84"/>
@@ -73,7 +74,7 @@
         <TextBlock Text="Clients" HorizontalAlignment="Left" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="39"/>
         <TextBox Text="{Binding Clients, Converter={StaticResource ClientsToStringConverter}}" Height="23" Margin="0,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Grid.Column="2" ToolTip="Connected clients"/>
         <TextBlock Text="Log" HorizontalAlignment="Left" Margin="0,235,0,0" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="20"/>
-        <TextBox Text="{Binding Log}" Margin="0,260,10,57" TextWrapping="Wrap" IsReadOnly="True" Grid.Column="1" Grid.ColumnSpan="3">
+        <TextBox Text="{Binding Log}" Margin="0,260,10,57" TextWrapping="Wrap" IsReadOnly="True" Grid.Column="1" Grid.ColumnSpan="3" VerticalScrollBarVisibility="Visible" local:TextBoxUtils.AutoScroll="True">
             <TextBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Clear" Click="OnMenuClear"/>

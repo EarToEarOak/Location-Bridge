@@ -94,6 +94,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Location.cs" />
+    <Compile Include="Misc.cs" />
     <Compile Include="WidgetLed.xaml.cs">
       <DependentUpon>WidgetLed.xaml</DependentUpon>
     </Compile>
