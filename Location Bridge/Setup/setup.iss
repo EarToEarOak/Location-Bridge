@@ -1,5 +1,5 @@
 #define _AppName "Location Bridge"
-#define _AppVersion "0.1"
+#define _AppVersion "1.0"
 #define _AppPublisher "Al Brown"
 #define _AppURL "http://eartoearoak.com/location-bridge"
 #define _AppExeName "LocationBridge.exe"
