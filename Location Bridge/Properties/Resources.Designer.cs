@@ -61,7 +61,7 @@ namespace Location_Bridge.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://eartoearoak.com/location-bridge.
+        ///   Looks up a localized string similar to http://eartoearoak.com/software/location-bridge.
         /// </summary>
         public static string Web_Link {
             get {
