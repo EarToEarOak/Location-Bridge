@@ -21,6 +21,8 @@ namespace Location_Bridge
         private Server server;
         private Thread threadServer;
 
+        private bool disposed = false;
+
         public WindowMain()
         {
             InitializeComponent();
@@ -74,13 +76,15 @@ namespace Location_Bridge
 
         protected virtual void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-                contextMenuStrip.Dispose();
-                notifyIcon.Dispose();
-                if (watcher != null)
-                    watcher.Dispose();
-            }
+            if (!disposed)
+                if (disposing)
+                {
+                    contextMenuStrip.Dispose();
+                    notifyIcon.Dispose();
+                    if (watcher != null)
+                        watcher.Dispose();
+                }
+            disposed = true;
         }
 
         protected override void OnStateChanged(EventArgs e)
@@ -93,9 +97,10 @@ namespace Location_Bridge
 
         private void OnClose(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Console.WriteLine("stop");
             GpsStop();
             ServerStop();
+            notifyIcon.Visible = false;
+            notifyIcon.Icon = null;
         }
 
         private void OnMenuOpen(object sender, EventArgs e)
