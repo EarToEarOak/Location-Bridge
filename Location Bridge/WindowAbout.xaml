@@ -35,8 +35,8 @@
         <TextBlock x:Name="textDesc" Text="Description" HorizontalAlignment="Left" Margin="117,60,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textCopyright" Text="Copyright" HorizontalAlignment="Left" Margin="117,122,0,0" VerticalAlignment="Top" Width="257"/>
         <TextBlock Margin="117,153,22,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="5">
-            <Hyperlink NavigateUri="{Binding Source={x:Static p:Resources.Web_Link}}" RequestNavigate="OnLink">
-                <Run Text="{x:Static p:Resources.Web_Link}"/>
+            <Hyperlink NavigateUri="{Binding Source={x:Static p:Resources.Link_Web}}" RequestNavigate="OnLink">
+                <Run Text="{x:Static p:Resources.Link_Web}"/>
             </Hyperlink>
         </TextBlock>
         <Button Content="OK" Margin="0,199,19,0" VerticalAlignment="Top" Click="OnButtonOk" HorizontalAlignment="Right" Width="75"/>

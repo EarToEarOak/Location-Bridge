@@ -10,7 +10,7 @@
         </Grid.ColumnDefinitions>
         <Button Content="OK" Margin="252,104,0,0" Click="OnButtonOk" Height="22" VerticalAlignment="Top" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="68"/>
 
-        <TextBlock Margin="20,60,14,0" TextWrapping="Wrap" Padding="5" Height="33" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2" HorizontalAlignment="Center"><Hyperlink NavigateUri="{Binding Source={x:Static Properties:Resources.Web_Link}}" RequestNavigate="OnLink"><Run Text="{x:Static Properties:Resources.Web_Link}"/></Hyperlink></TextBlock>
+        <TextBlock Margin="20,60,14,0" TextWrapping="Wrap" Padding="5" Height="33" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2" HorizontalAlignment="Center"><Hyperlink NavigateUri="{Binding Source={x:Static Properties:Resources.Link_Web}}" RequestNavigate="OnLink"><Run Text="{x:Static Properties:Resources.Link_Web}"/></Hyperlink></TextBlock>
         <TextBlock x:Name="textUpdate" HorizontalAlignment="Left" Margin="20,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="290" Grid.ColumnSpan="2"/>
 
     </Grid>

@@ -61,11 +61,20 @@ namespace Location_Bridge.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://raw.githubusercontent.com/EarToEarOak/Location-Bridge/master/Location%20Bridge/Setup/setup.iss.
+        /// </summary>
+        public static string Link_Update {
+            get {
+                return ResourceManager.GetString("Link_Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://eartoearoak.com/software/location-bridge.
         /// </summary>
-        public static string Web_Link {
+        public static string Link_Web {
             get {
-                return ResourceManager.GetString("Web_Link", resourceCulture);
+                return ResourceManager.GetString("Link_Web", resourceCulture);
             }
         }
     }
