@@ -36,7 +36,7 @@ namespace Location_Bridge
 
             var raw = e.Result;
             var file = Encoding.UTF8.GetString(raw);
-            var regex = new Regex(@"#define _AppVersion ""(\d)\.(\d)\.(\d)""");
+            var regex = new Regex(@"#define _AppVersion ""(\d+)\.(\d+)\.(\d+)""");
             var match = regex.Match(file);
 
             if (match.Groups.Count == 4)
