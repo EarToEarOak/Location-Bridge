@@ -22,7 +22,7 @@ namespace Location_Bridge
             webClient.DownloadDataCompleted += Completed;
             try
             {
-                webClient.DownloadDataAsync(new Uri("https://raw.githubusercontent.com/EarToEarOak/Location-Bridge/master/Location%20Bridge/Setup/setup.iss"));
+                webClient.DownloadDataAsync(new Uri(Properties.Resources.Link_Update));
             }
             catch (WebException)
             {
