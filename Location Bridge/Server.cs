@@ -211,7 +211,7 @@ namespace Location_Bridge
             lock (lockClients)
             {
                 foreach (Client client in clients)
-                    Send(client, "\n\r");
+                    Send(client, "\r\n");
             }
         }
 
