@@ -29,6 +29,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using System.Timers;
 
 namespace Location_Bridge
 {
@@ -66,6 +67,11 @@ namespace Location_Bridge
             lockGps = gpsLock;
             this.callback = callback;
             UpdateCount();
+
+            System.Timers.Timer timerAlive = new System.Timers.Timer();
+            timerAlive.Elapsed += new ElapsedEventHandler(OnTimerAlive);
+            timerAlive.Interval = 30000;
+            timerAlive.Enabled = true;
         }
 
         public void Start()
@@ -197,6 +203,15 @@ namespace Location_Bridge
             catch (SocketException)
             {
                 ClientRemove(client);
+            }
+        }
+
+        private void OnTimerAlive(object source, ElapsedEventArgs e)
+        {
+            lock (lockClients)
+            {
+                foreach (Client client in clients)
+                    Send(client, "\n\r");
             }
         }
 
