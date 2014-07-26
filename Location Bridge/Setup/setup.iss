@@ -1,8 +1,8 @@
 #define _AppName "Location Bridge"
-#define _AppVersion "1.1.0"
+#define _AppExeName "LocationBridge.exe"
+#define _AppVersion GetFileVersion(AddBackslash(SourcePath) + "..\bin\x86\Release\" + _AppExeName)
 #define _AppPublisher "Al Brown"
 #define _AppURL "http://eartoearoak.com/location-bridge"
-#define _AppExeName "LocationBridge.exe"
 #define _DotNet "NDP451-KB2859818-Web.exe"
 
 [Setup]
