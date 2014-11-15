@@ -36,9 +36,9 @@ namespace Location_Bridge
 
     // Based on http://msdn.microsoft.com/en-us/library/fx6588te.aspx
 
-    public class Client
+    class Client
     {
-        public Socket socket = null;
+        public Socket socket {get; set;}
 
         public Client(Socket socket)
         {
@@ -114,7 +114,7 @@ namespace Location_Bridge
             }
         }
 
-        private string GetHostName(string address)
+        private static string GetHostName(string address)
         {
             string host = address.Split(':')[0];
             string hostName = "";
@@ -215,7 +215,7 @@ namespace Location_Bridge
             }
         }
 
-        private string NmeaCoord(double coord, bool isLat)
+        private static string NmeaCoord(double coord, bool isLat)
         {
 
             var direct = "";
@@ -246,7 +246,7 @@ namespace Location_Bridge
             return nmea;
         }
 
-        private string NmeaChecksum(string sentence)
+        private static string NmeaChecksum(string sentence)
         {
             var checksum = 0;
 
@@ -257,7 +257,7 @@ namespace Location_Bridge
 
         }
 
-        private string NmeaFormat(Location location)
+        private static string NmeaFormat(Location location)
         {
             var lat = NmeaCoord(location.lat, true);
             var lon = NmeaCoord(location.lon, false);
@@ -305,9 +305,9 @@ namespace Location_Bridge
         }
     }
 
-    public enum ServerStatusCode { OK, ERROR, CONN };
+    enum ServerStatusCode { OK, ERROR, CONN };
 
-    public class ServerStatus
+    class ServerStatus
     {
         public ServerStatusCode status { get; set; }
         public string message { get; set; }

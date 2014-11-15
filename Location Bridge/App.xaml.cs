@@ -27,7 +27,7 @@ using System.Windows;
 
 namespace Location_Bridge
 {
-    public partial class App : Application
+    partial class App : Application
     {
     }
 }

@@ -114,8 +114,8 @@ namespace Location_Bridge
             while (lines.Count > 100)
                 lines.RemoveAt(0);
 
-            var time = String.Format("{0:T}", DateTime.Now);
-            var logLine = time + " - " + line;
+            var timeStr = String.Format("{0:T}", DateTime.Now);
+            var logLine = timeStr + " - " + line;
             lines.Add(logLine);
 
             Log = String.Join("\n", lines);

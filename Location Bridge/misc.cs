@@ -28,7 +28,7 @@ using System.Windows.Controls;
 
 namespace Location_Bridge
 {
-    public class TextBoxUtils
+    static class TextBoxUtils
     {
 
         public static readonly DependencyProperty pAutoScroll =

@@ -31,12 +31,12 @@ using System.Windows.Threading;
 
 namespace Location_Bridge
 {
-    public partial class WidgetLed : UserControl
+    partial class WidgetLed : UserControl
     {
 
-        public static DependencyProperty pColour = DependencyProperty.Register(
+        private static DependencyProperty pColour = DependencyProperty.Register(
             "Colour", typeof(object), typeof(WidgetLed));
-        public static DependencyProperty pBlur = DependencyProperty.Register(
+        private static DependencyProperty pBlur = DependencyProperty.Register(
             "Blur", typeof(object), typeof(WidgetLed));
 
         private DispatcherTimer timer = new DispatcherTimer();

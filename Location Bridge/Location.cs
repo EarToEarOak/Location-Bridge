@@ -27,14 +27,15 @@ using System;
 
 namespace Location_Bridge
 {
-    public class Location
+    class Location
     {
-        public double lat;
-        public double lon;
-        public double alt;
-        public double speed;
-        public double ha, va;
-        public DateTimeOffset time;
+        public double lat { get; set; }
+        public double lon { get; set; }
+        public double alt { get; set; }
+        public double speed { get; set; }
+        public double ha { get; set; }
+        public double va { get; set; }
+        public DateTimeOffset time { get; set; }
 
         public Location()
         {

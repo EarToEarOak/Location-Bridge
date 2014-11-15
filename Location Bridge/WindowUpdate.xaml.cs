@@ -10,7 +10,7 @@ using System.Windows.Navigation;
 
 namespace Location_Bridge
 {
-    public partial class WindowUpdate : Window
+    partial class WindowUpdate : Window
     {
         public WindowUpdate()
         {

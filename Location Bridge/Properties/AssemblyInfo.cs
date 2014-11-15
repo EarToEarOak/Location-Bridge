@@ -23,6 +23,7 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+using System;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
@@ -46,3 +47,5 @@ using System.Windows;
 )]
 
 [assembly: AssemblyVersion("1.1.0.*")]
+
+[assembly: CLSCompliant(true)]
