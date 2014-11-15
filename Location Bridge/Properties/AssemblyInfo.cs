@@ -48,4 +48,4 @@ using System.Windows;
 
 [assembly: AssemblyVersion("1.1.0.*")]
 
-[assembly: CLSCompliant(true)]
+[assembly: CLSCompliant(false)]
