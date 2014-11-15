@@ -28,6 +28,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Navigation;
+using Location_Bridge.Properties;
 
 namespace Location_Bridge
 {
@@ -45,7 +46,8 @@ namespace Location_Bridge
                 .OfType<AssemblyDescriptionAttribute>()
                 .FirstOrDefault();
             textDesc.Text = attrDesc.Description;
-            textVersion.Text = "Version " + assembly.GetName().Version.ToString();
+            textVersion.Text = Properties.Resources.Version_ +
+                assembly.GetName().Version.ToString();
             var attrCopyright = assembly
                 .GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false)
                 .OfType<AssemblyCopyrightAttribute>()

@@ -61,6 +61,87 @@ namespace Location_Bridge.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} connected.
+        /// </summary>
+        public static string _0Connected {
+            get {
+                return ResourceManager.GetString("_0Connected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} disconnected.
+        /// </summary>
+        public static string _0Disconnected {
+            get {
+                return ResourceManager.GetString("_0Disconnected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} refused (too many connections).
+        /// </summary>
+        public static string _0RefusedTooManyConnections {
+            get {
+                return ResourceManager.GetString("_0RefusedTooManyConnections", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check failed.
+        /// </summary>
+        public static string CheckFailed {
+            get {
+                return ResourceManager.GetString("CheckFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checking for update....
+        /// </summary>
+        public static string CheckingForUpdate {
+            get {
+                return ResourceManager.GetString("CheckingForUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connection failed.
+        /// </summary>
+        public static string ConnectionFailed {
+            get {
+                return ResourceManager.GetString("ConnectionFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to error {0}.
+        /// </summary>
+        public static string Error0 {
+            get {
+                return ResourceManager.GetString("Error0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        public static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GPS: .
+        /// </summary>
+        public static string GPS_ {
+            get {
+                return ResourceManager.GetString("GPS_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://raw.githubusercontent.com/EarToEarOak/Location-Bridge/master/Location%20Bridge/Setup/setup.iss.
         /// </summary>
         public static string Link_Update {
@@ -75,6 +156,114 @@ namespace Location_Bridge.Properties {
         public static string Link_Web {
             get {
                 return ResourceManager.GetString("Link_Web", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No update available.
+        /// </summary>
+        public static string NoUpdateAvailable {
+            get {
+                return ResourceManager.GetString("NoUpdateAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Server: .
+        /// </summary>
+        public static string Server_ {
+            get {
+                return ResourceManager.GetString("Server_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        public static string Start {
+            get {
+                return ResourceManager.GetString("Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Started.
+        /// </summary>
+        public static string Started {
+            get {
+                return ResourceManager.GetString("Started", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting.
+        /// </summary>
+        public static string Starting {
+            get {
+                return ResourceManager.GetString("Starting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stop.
+        /// </summary>
+        public static string Stop {
+            get {
+                return ResourceManager.GetString("Stop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stopped.
+        /// </summary>
+        public static string Stopped {
+            get {
+                return ResourceManager.GetString("Stopped", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stopping.
+        /// </summary>
+        public static string Stopping {
+            get {
+                return ResourceManager.GetString("Stopping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Too many connections.
+        /// </summary>
+        public static string TooManyConnections {
+            get {
+                return ResourceManager.GetString("TooManyConnections", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update available: {0}.
+        /// </summary>
+        public static string UpdateAvailable0 {
+            get {
+                return ResourceManager.GetString("UpdateAvailable0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version .
+        /// </summary>
+        public static string Version_ {
+            get {
+                return ResourceManager.GetString("Version_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to waiting.
+        /// </summary>
+        public static string Waiting {
+            get {
+                return ResourceManager.GetString("Waiting", resourceCulture);
             }
         }
     }

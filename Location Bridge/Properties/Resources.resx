@@ -123,4 +123,67 @@
   <data name="Link_Web" xml:space="preserve">
     <value>http://eartoearoak.com/software/location-bridge</value>
   </data>
+  <data name="Waiting" xml:space="preserve">
+    <value>waiting</value>
+  </data>
+  <data name="TooManyConnections" xml:space="preserve">
+    <value>Too many connections</value>
+  </data>
+  <data name="Stopped" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Stopping" xml:space="preserve">
+    <value>Stopping</value>
+  </data>
+  <data name="Starting" xml:space="preserve">
+    <value>Starting</value>
+  </data>
+  <data name="Started" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="Server_" xml:space="preserve">
+    <value>Server: </value>
+  </data>
+  <data name="GPS_" xml:space="preserve">
+    <value>GPS: </value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="_0RefusedTooManyConnections" xml:space="preserve">
+    <value>{0} refused (too many connections)</value>
+  </data>
+  <data name="_0Connected" xml:space="preserve">
+    <value>{0} connected</value>
+  </data>
+  <data name="_0Disconnected" xml:space="preserve">
+    <value>{0} disconnected</value>
+  </data>
+  <data name="Error0" xml:space="preserve">
+    <value>error {0}</value>
+  </data>
+  <data name="Version_" xml:space="preserve">
+    <value>Version </value>
+  </data>
+  <data name="CheckFailed" xml:space="preserve">
+    <value>Check failed</value>
+  </data>
+  <data name="NoUpdateAvailable" xml:space="preserve">
+    <value>No update available</value>
+  </data>
+  <data name="UpdateAvailable0" xml:space="preserve">
+    <value>Update available: {0}</value>
+  </data>
+  <data name="ConnectionFailed" xml:space="preserve">
+    <value>Connection failed</value>
+  </data>
+  <data name="CheckingForUpdate" xml:space="preserve">
+    <value>Checking for update...</value>
+  </data>
 </root>

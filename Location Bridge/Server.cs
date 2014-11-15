@@ -30,6 +30,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Timers;
+using Location_Bridge.Properties;
 
 namespace Location_Bridge
 {
@@ -51,7 +52,7 @@ namespace Location_Bridge
         public const int MAX_CLIENTS = 10;
 
         private static byte[] warnMaxClients  = Encoding.ASCII.GetBytes(
-            "Too many connections");
+            Resources.TooManyConnections);
 
         private object lockGps;
         private CallbackUI callback;
@@ -84,7 +85,7 @@ namespace Location_Bridge
 
             var socketServer = new Socket(AddressFamily.InterNetwork,
                                           SocketType.Stream, ProtocolType.Tcp);
-            callback(new ServerStatus("waiting"));
+            callback(new ServerStatus(Resources.Waiting));
 
             try
             {
@@ -102,7 +103,7 @@ namespace Location_Bridge
             catch (SocketException e)
             {
                 callback(new ServerStatus(ServerStatusCode.ERROR,
-                    String.Format("error {0}", e.SocketErrorCode.ToString())));
+                    String.Format(Resources.Error0, e.SocketErrorCode.ToString())));
                 if (socketServer.IsBound)
                     socketServer.Shutdown(SocketShutdown.Both);
             }
@@ -146,7 +147,7 @@ namespace Location_Bridge
             var addr = GetHostName(client.socket.RemoteEndPoint.ToString());
             client.socket.Shutdown(SocketShutdown.Both);
             client.socket.Close();
-            callback(new ServerStatus(String.Format("{0} disconnected", addr)));
+            callback(new ServerStatus(String.Format(Resources._0Disconnected, addr)));
             UpdateCount();
         }
 
@@ -165,7 +166,7 @@ namespace Location_Bridge
                     var client = new Client(socketClient);
                     ClientAdd(client);
                     callback(new ServerStatus(
-                        String.Format("{0} connected", addr)));
+                        String.Format(Resources._0Connected, addr)));
                     UpdateCount();
                 }
                 else{
@@ -173,7 +174,7 @@ namespace Location_Bridge
                     socketClient.Shutdown(SocketShutdown.Both);
                     socketClient.Close();
                     callback(new ServerStatus(
-                        String.Format("{0} refused (too many connections)", addr)));
+                        String.Format(Resources._0RefusedTooManyConnections, addr)));
                 }
             }
             catch (ObjectDisposedException) { }

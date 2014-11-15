@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Navigation;
+using Location_Bridge.Properties;
 
 namespace Location_Bridge
 {
@@ -16,7 +17,7 @@ namespace Location_Bridge
         {
             InitializeComponent();
 
-            textUpdate.Text = "Checking for update...";
+            textUpdate.Text = Properties.Resources.CheckingForUpdate;
 
             var webClient = new WebClient();
             webClient.DownloadDataCompleted += Completed;
@@ -26,7 +27,7 @@ namespace Location_Bridge
             }
             catch (WebException)
             {
-                textUpdate.Text = "Connection failed";
+                textUpdate.Text = Properties.Resources.ConnectionFailed;
             }
         }
 
@@ -50,16 +51,16 @@ namespace Location_Bridge
                     var verLocal = assembly.GetName().Version;
 
                     if (verRemote > verLocal)
-                        textUpdate.Text = String.Format("Update available: {0}",
+                        textUpdate.Text = String.Format(Properties.Resources.UpdateAvailable0,
                             verRemote.ToString());
                     else
-                        textUpdate.Text = "No update available";
+                        textUpdate.Text = Properties.Resources.NoUpdateAvailable;
                 }
                 else
-                    textUpdate.Text = "Check failed";
+                    textUpdate.Text = Properties.Resources.CheckFailed;
             }
             else
-                textUpdate.Text = "Check failed";
+                textUpdate.Text = Properties.Resources.CheckFailed; ;
         }
 
         private void OnButtonOk(object sender, RoutedEventArgs e)
