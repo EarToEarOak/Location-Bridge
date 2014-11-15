@@ -269,7 +269,7 @@ namespace Location_Bridge
             var gga = String.Format("GPGGA,{0},{1},{2},1,12,,{3},M,,M,,,",
                 time, lat, lon, alt);
             var gll = String.Format("GPGLL,{0},{1},{2},V",
-                lat, lon, time, alt);
+                lat, lon, time);
             var rmc = String.Format("GPRMC,{0},A,{1},{2},{3},0,{4},0,0,A",
                 time, lat, lon, speed, date);
 
