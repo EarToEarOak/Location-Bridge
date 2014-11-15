@@ -37,12 +37,12 @@ namespace Location_Bridge
                 new Forms.ToolStripMenuItem(appName, null,
                     new EventHandler(OnMenuOpen), null),
                 new Forms.ToolStripSeparator(),
-                new Forms.ToolStripMenuItem("Start", null,
+                new Forms.ToolStripMenuItem(Properties.Resources.Start, null,
                     new EventHandler(OnMenuStart), null),
-                new Forms.ToolStripMenuItem("Stop", null,
+                new Forms.ToolStripMenuItem(Properties.Resources.Stop, null,
                     new EventHandler(OnMenuStop), null),
                 new Forms.ToolStripSeparator(),
-                new Forms.ToolStripMenuItem("Exit", null,
+                new Forms.ToolStripMenuItem(Properties.Resources.Exit, null,
                     new EventHandler(OnMenuExit), null)
             });
             var font = new Font(contextMenuStrip.Items[0].Font,
@@ -192,7 +192,7 @@ namespace Location_Bridge
 
         private void OnGpsStatus(object sender, GeoPositionStatusChangedEventArgs e)
         {
-            ui.LogAdd("GPS: " + e.Status.ToString());
+            ui.LogAdd(Properties.Resources.GPS_ + e.Status.ToString());
 
             if (e.Status == GeoPositionStatus.Disabled)
                 GpsStop();
@@ -236,18 +236,18 @@ namespace Location_Bridge
             }
 
             if (status.message != null)
-                ui.LogAdd("Server: " + status.message);
+                ui.LogAdd(Properties.Resources.Server_ + status.message);
         }
 
         private void GpsStart()
         {
             if (watcher == null)
             {
-                ui.Button = "Stop";
-                notifyIcon.BalloonTipText = "Started";
+                ui.Button = Properties.Resources.Stop;
+                notifyIcon.BalloonTipText = Properties.Resources.Started;
                 MenuState(false);
 
-                ui.LogAdd("Starting");
+                ui.LogAdd(Properties.Resources.Starting);
                 watcher = new GeoCoordinateWatcher();
                 watcher.PositionChanged +=
                     new EventHandler<GeoPositionChangedEventArgs<GeoCoordinate>>(OnGpsPos);
@@ -261,12 +261,12 @@ namespace Location_Bridge
         {
             if (watcher != null)
             {
-                ui.LogAdd("Stopping");
+                ui.LogAdd(Properties.Resources.Stopping);
                 watcher.Stop();
                 watcher = null;
 
-                ui.Button = "Start";
-                notifyIcon.BalloonTipText = "Stopped";
+                ui.Button = Properties.Resources.Start;
+                notifyIcon.BalloonTipText = Properties.Resources.Stopped;
                 MenuState(false);
             }
         }
