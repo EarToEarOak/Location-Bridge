@@ -31,7 +31,7 @@ using System.Windows.Navigation;
 
 namespace Location_Bridge
 {
-    public partial class WindowAbout : Window
+    partial class WindowAbout : Window
     {
         public WindowAbout()
         {

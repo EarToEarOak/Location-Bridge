@@ -27,7 +27,7 @@ using System.Windows;
 
 namespace Location_Bridge
 {
-    public partial class WindowPreferences : Window
+    partial class WindowPreferences : Window
     {
         public WindowPreferences()
         {

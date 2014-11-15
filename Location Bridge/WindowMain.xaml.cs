@@ -8,7 +8,7 @@ using Forms = System.Windows.Forms;
 
 namespace Location_Bridge
 {
-    public partial class WindowMain : Window, IDisposable
+    partial class WindowMain : Window, IDisposable
     {
 
         private Forms.ContextMenuStrip contextMenuStrip = new Forms.ContextMenuStrip();
