@@ -1,6 +1,6 @@
 # Location Bridge #
 
-Copyright 2014 Al Brown
+Copyright 2014-2015 Al Brown
 
 al [at] eartoearoak.com
 

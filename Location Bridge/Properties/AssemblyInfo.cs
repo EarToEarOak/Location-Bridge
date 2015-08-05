@@ -3,7 +3,7 @@
 
  http://eartoearoak.com/software/location-bridge
 
- Copyright 2014 Al Brown
+ Copyright 2014-2015 Al Brown
 
  A simple server that provides NMEA sentences over TCP from the
  Windows location sensors.
@@ -35,7 +35,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Location Bridge")]
-[assembly: AssemblyCopyright("© 2014 Al Brown")]
+[assembly: AssemblyCopyright("© 2014-2015 Al Brown")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
