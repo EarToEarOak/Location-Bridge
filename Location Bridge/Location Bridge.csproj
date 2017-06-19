@@ -154,9 +154,6 @@
     <Compile Include="WindowPreferences.xaml.cs">
       <DependentUpon>WindowPreferences.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowUpdate.xaml.cs">
-      <DependentUpon>WindowUpdate.xaml</DependentUpon>
-    </Compile>
     <Page Include="WidgetLed.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -180,10 +177,6 @@
     <Page Include="WindowPreferences.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowUpdate.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
