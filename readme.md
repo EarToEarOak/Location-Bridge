@@ -1,6 +1,6 @@
 # Location Bridge #
 
-Copyright 2014-2015 Al Brown
+Copyright 2014-2017 Al Brown
 
 al [at] eartoearoak.com
 
@@ -8,7 +8,7 @@ al [at] eartoearoak.com
  A simple server that provides NMEA sentences over TCP from the
  Windows 7/8.x location sensors.
 
-More details can be found [here](http://eartoearoak.com/software/location-bridge).
+More details can be found [here](https://eartoearoak.com/software/location-bridge).
 
 Tested on:
 
@@ -22,6 +22,9 @@ Enable your device in 'Location and Other Sensors'
 
  - **Windows 8:**
 Enable 'Turn on the Windows Location Platform' in 'Location Settings'
+
+ - **Windows 10:**
+In Settings navigate to 'Privacy' then turn 'Location' to on.
 
 - Run 'Location Bridge' from the start menu.
 
