@@ -136,12 +136,6 @@ namespace Location_Bridge
             }
         }
 
-        private void OnMenuUpdate(object sender, EventArgs e)
-        {
-            WindowUpdate update = new WindowUpdate();
-            update.ShowDialog();
-        }
-
         private void OnMenuAbout(object sender, EventArgs e)
         {
             WindowAbout about = new WindowAbout();

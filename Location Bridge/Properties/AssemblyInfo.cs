@@ -35,7 +35,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Location Bridge")]
-[assembly: AssemblyCopyright("© 2014-2015 Al Brown")]
+[assembly: AssemblyCopyright("© 2014-2017 Al Brown")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

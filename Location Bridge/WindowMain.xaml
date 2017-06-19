@@ -3,7 +3,7 @@
 
  http://eartoearoak.com/software/location-bridge
 
- Copyright 2014-2015 Al Brown
+ Copyright 2014-2017 Al Brown
 
  A simple server that provides NMEA sentences over TCP from the
  Windows location sensors.
@@ -55,8 +55,6 @@
                 <MenuItem Header="_Preferences..." Click="OnMenuPrefs"/>
             </MenuItem>
             <MenuItem Header="_Help">
-                <MenuItem Header="Check for updates..." Click="OnMenuUpdate"/>
-                <Separator/>
                 <MenuItem Header="_About..." Click="OnMenuAbout"/>
             </MenuItem>
         </Menu>
