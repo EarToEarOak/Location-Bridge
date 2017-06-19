@@ -3,7 +3,7 @@
 #define _AppVersion GetFileVersion(AddBackslash(SourcePath) + "..\bin\x86\Release\" + _AppExeName)
 #define _AppPublisher "Al Brown"
 #define _AppURL "http://eartoearoak.com/location-bridge"
-#define _DotNet "NDP451-KB2859818-Web.exe"
+#define _DotNet "NDP452-KB2901954-Web.exe"
 
 [Setup]
 AppId={{11305330-A050-4C36-BBC4-0AB1C94D29FB}
@@ -57,7 +57,7 @@ begin
   reg := 'SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full';
 
   result := RegQueryDWordValue(HKLM, reg, 'Release', release);
-  result := result and (release >= 378389);
+  result := result and (release >= 379893);
 end;
 
 procedure DotNetInstall();
@@ -66,12 +66,12 @@ var
   code: integer;
 begin
   status := WizardForm.StatusLabel.Caption;
-  WizardForm.StatusLabel.Caption := 'Installing .Net 4.5.1';
+  WizardForm.StatusLabel.Caption := 'Installing .Net 4.5.2';
   WizardForm.ProgressGauge.Style := npbstMarquee;
   Exec(ExpandConstant('{tmp}\{#_DotNet}'), '/q /noreboot', '', SW_SHOW, ewWaitUntilTerminated, code)
   if (code <> 0) then
   begin
-    MsgBox('.NET 4.5.1 installation failed.', mbError, MB_OK);
+    MsgBox('.NET 4.5.2 installation failed.', mbError, MB_OK);
   end;
   WizardForm.StatusLabel.Caption := status;
   WizardForm.ProgressGauge.Style := npbstNormal;
